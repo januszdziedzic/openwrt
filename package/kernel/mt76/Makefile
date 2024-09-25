@@ -347,7 +347,7 @@ endef
 define KernelPackage/mt7925u
   $(KernelPackage/mt76-default)
   TITLE:=MediaTek MT7925U wireless driver
-  DEPENDS+=+kmod-mt792x-usb +kmod-mt7925-common
+  DEPENDS+=+kmod-mt792x-usb +kmod-mt7925-common +@DRIVER_11BE_SUPPORT
   FILES:= $(PKG_BUILD_DIR)/mt7925/mt7925u.ko
   AUTOLOAD:=$(call AutoProbe,mt7925u)
 endef
@@ -355,7 +355,7 @@ endef
 define KernelPackage/mt7925e
   $(KernelPackage/mt76-default)
   TITLE:=MediaTek MT7925e wireless driver
-  DEPENDS+=@PCI_SUPPORT +kmod-mt7925-common
+  DEPENDS+=@PCI_SUPPORT +kmod-mt7925-common +@DRIVER_11BE_SUPPORT
   FILES:= $(PKG_BUILD_DIR)/mt7925/mt7925e.ko
   AUTOLOAD:=$(call AutoProbe,mt7925e)
 endef
