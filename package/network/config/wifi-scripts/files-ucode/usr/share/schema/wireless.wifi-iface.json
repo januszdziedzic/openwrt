@@ -1186,6 +1186,10 @@
 		"wps_pushbutton": {
 			"description": "Support WPS pushbutton",
 			"type": "boolean"
+		},
+		"wps_cred_add_sae": {
+			"description": "Advertise SAE credentials via WPS (allow provisioning SAE password on enrollees)",
+			"type": "boolean"
 		}
 	}
 }
